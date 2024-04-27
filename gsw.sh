@@ -178,7 +178,7 @@ function mainloop() {
 	echo "Logs:"
 	echo "-------------------------------------------------------------"
 	# git log --graph -n 3 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	git log --graph -n $logs --pretty=format:'%C(bold blue)<%an>%Creset - %s %Cgreen(%cr)' --abbrev-commit
+	git --no-pager log --graph -n $logs --pretty=format:'%C(bold blue)<%an>%Creset - %s %Cgreen(%cr)' --abbrev-commit
 	echo
 	echo "Status:"
 	echo "-------------------------------------------------------------"
